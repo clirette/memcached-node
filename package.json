@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "memcached": "^2.2.2"
+    "memcached": "^2.2.2",
+    "memjs": "^1.2.0"
   }
 }
