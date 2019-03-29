@@ -1,15 +1,4 @@
 const Memcached = require('memcached');
-<<<<<<< HEAD
-// const memcached = new Memcached(['10.229.194.249:11211', '10.229.195.108:11211', '10.229.192.134:11211'], { idle: 10000 });
-const memcached = new Memcached('localhost:11211', { idle: 10000 });
-
-memcached.set('test', 'foo', 20, err => {
-  if (err) console.log(err);
-  memcached.get('test', (err, data) => {
-    if (err) console.log(err);
-    else console.log(data);
-  });
-=======
 const util = require('util');
 // memcached -p 11212 -d
 //retries = number of times a retry will be made before reporting an issue
@@ -61,7 +50,6 @@ memcached.on('reconnect', details => {
 
 memcached.on('issue', details => {
   console.log(`issue at ${new Date()} ${util.inspect(details)}`)
->>>>>>> 724eb8aa03adb7134e81fa40a23c9af46e17eb26
 });
 
 memcached.on('failure', details => {
